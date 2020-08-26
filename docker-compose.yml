@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+    anyApp:
+        image: ${DOKER_REPO:-rtadeoz}/${PROJECT_LANG:-python}-expert:v1.0
+        build:
+            context: src/${PROJECT_LANG:-python}
+        ports: 
+            - 8080:8080
